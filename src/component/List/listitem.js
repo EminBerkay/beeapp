@@ -37,7 +37,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons'
            <View style={{
                 marginLeft:10,
                 backgroundColor:
-                    index+1 == 1 ? "#F6BB4A"
+                     index+1 == 1 ? "#F6BB4A"
                     :index+1 == 2 ? "#F6BB4A"
                     :index+1 == 3 ? "#F6BB4A"
                     :"#d5d5d5",
@@ -49,8 +49,13 @@ import Icon from 'react-native-vector-icons/MaterialIcons'
           {index+1}
           </Text>
           </View>
-          <View style={{alignContent:"center", alignSelf:"center", backgroundColor:"#F6BB4A", borderRadius:50, padding:6, paddingHorizontal:6}}>
-           <Image key={post?.id} style={{borderRadius:50, width: 50, height:50}} source={{uri:post?.picture?.large}} />
+          <View style={{alignContent:"center", alignSelf:"center", 
+                    backgroundColor: 
+                     index+1 == 1 ? "#F6BB4A"
+                    :index+1 == 2 ? "#F6BB4A"
+                    :index+1 == 3 ? "#F6BB4A"
+                    :"#d5d5d5", borderRadius:50, padding:6, paddingHorizontal:6}}>
+               <Image key={post?.id} style={{borderRadius:50, width: 50, height:50}} source={{uri:post?.picture?.large}} />
           </View>
           <View>
           <Text numberOfLines={1} style={{marginLeft:-8, width:120, fontWeight:"400"}}>{post?.login?.username}</Text>
