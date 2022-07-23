@@ -1,7 +1,6 @@
-import { View, Text, Image, TouchableOpacity, Modal, Dimensions } from 'react-native'
+import { View, Text, Image, TouchableOpacity, Modal, Dimensions, Platform } from 'react-native'
 import React,{useState} from 'react'
 import Icon from 'react-native-vector-icons/MaterialIcons'
-
 
 
  const listitem = ({post, index}) => {
@@ -11,7 +10,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons'
   return (
      <TouchableOpacity 
           onPress={() => setInformation(true)}
-          style={{ marginTop:30, margin:10, marginBottom:20, shadowOpacity:0.5, shadowRadius:2, shadowColor:"#bebebe", shadowOffset:{width:2, height:3}}}>
+          style={{ marginTop:35, margin:20, marginBottom:20, shadowOpacity:0.5, shadowRadius:2, shadowColor:"#bebebe", shadowOffset:{width:2, height:3}}}>
       <View style={{flexDirection:"row",  alignContent:"space-around", justifyContent:"space-between", alignItems:"center", borderRadius:10}}>
           {index+1 == 1 || index+1 == 2 || index+1 == 3
           ? <Image style={{borderColor:"#dedede", borderWidth:0.18, borderRadius:14, position:"absolute", width:"100%", height:100}} source={require("../../images/userbackgroud.jpg")}/>
@@ -20,9 +19,9 @@ import Icon from 'react-native-vector-icons/MaterialIcons'
          <View style={{
               borderColor:"#e6e6e6",
                     opacity:
-                    index+1 == 1 ? 0.35 : 
+                    index+1 == 1 ? 0.32 : 
                     index+1 == 2 ? 0.5 :
-                    index+1 == 3 ? 0.03 : 0.5,
+                    index+1 == 3 ? 0.05 : 0.5,
                backgroundColor:
                     index+1 == 1 ? "#F6BB4A" : 
                     index+1 == 2 ? "#F8F5F5" :
@@ -42,11 +41,11 @@ import Icon from 'react-native-vector-icons/MaterialIcons'
                     :index+1 == 2 ? "#F6BB4A"
                     :index+1 == 3 ? "#F6BB4A"
                     :"#d5d5d5",
-                paddingVertical:9,
+                paddingVertical:Platform.OS == "android" ? 7.2 : 9,
                 borderRadius:50,
                 padding:6, 
                 paddingHorizontal:13}}>
-          <Text style={{fontSize:16, fontWeight:"700"}}>
+          <Text style={{fontSize:15, fontWeight:"700"}}>
           {index+1}
           </Text>
           </View>
@@ -57,7 +56,6 @@ import Icon from 'react-native-vector-icons/MaterialIcons'
           <Text numberOfLines={1} style={{marginLeft:-8, width:120, fontWeight:"400"}}>{post?.login?.username}</Text>
           <Text numberOfLines={1} style={{marginLeft:-8, width:120, fontWeight:"400", color:"grey"}}>{post?.location?.city}</Text>
           </View>
-          
           <View style={{flex:0.3, marginRight:10}}>
           {index+1 == 1 || index+1 == 2 || index+1 == 3
           ? <Icon name="person" size={30} color={

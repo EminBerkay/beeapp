@@ -7,7 +7,7 @@ import { apiData } from '../api/redux/actions'
 const index = (props) => {
 
      const [refreshing, setRefreshing] = useState(false)
-     const [process, setProcess] = useState(false)
+     const [process, setProcess] = useState(true)
      const [loading, setLoading] = useState(false)
      const [loadCount, setLoadCount] = useState(20)
 

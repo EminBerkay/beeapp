@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, Appearance, StyleSheet, TouchableOpacity } from 'react-native'
+import { View, Text, SafeAreaView, Appearance, StyleSheet, TouchableOpacity, Platform } from 'react-native'
 import React from 'react'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 
@@ -43,9 +43,9 @@ const style = StyleSheet.create({
      },
      headerItem:{
           padding:10, 
-          paddingHorizontal:12, 
+          paddingHorizontal:10, 
           borderRadius:8, 
-          borderWidth:0.18, 
+          borderWidth:Platform.OS == "android" ? 0.3 : 0.19, 
           borderColor:"#e5e5e5", 
           shadowOpacity:1.8, 
           backgroundColor:"white", 
