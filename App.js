@@ -11,7 +11,7 @@ import { reducer } from './src/component/api/redux/reducers'
 function App() {
 
   const store = createStore(reducer, applyMiddleware(thunk))
-   
+
   return (
      <Provider store={store}>
        <SafeAreaView>

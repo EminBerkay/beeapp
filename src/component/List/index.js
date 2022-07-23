@@ -1,4 +1,4 @@
-import { View, Text, FlatList, RefreshControl, TouchableOpacity, ActivityIndicator } from 'react-native'
+import { Text, FlatList, RefreshControl, TouchableOpacity, ActivityIndicator } from 'react-native'
 import React,{Fragment, useState, useCallback, useEffect} from 'react'
 import ListItem from './listitem'
 import { connect } from 'react-redux'
@@ -52,8 +52,7 @@ const index = (props) => {
   return (
     <Fragment>
        <FlatList
-            style={{  height: "100%", backgroundColor:"#f8f8f8"}}
-               refreshControl={
+            refreshControl={
               <RefreshControl
                 refreshing={refreshing}
                 onRefresh={onRefresh}  

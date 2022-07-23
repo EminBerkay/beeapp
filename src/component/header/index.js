@@ -1,6 +1,6 @@
 import { View, Text, SafeAreaView, Appearance, StyleSheet, TouchableOpacity, Platform } from 'react-native'
 import React from 'react'
-import Icon from 'react-native-vector-icons/MaterialIcons'
+import Arrow from '../../images/svg/Arrowİcon'
 
  const theme = Appearance.getColorScheme()
 
@@ -17,7 +17,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons'
                <View 
                   style={style.headerItem}>
                    <View >
-                   <Icon name="arrow-back" color={"#F6BB4A"} size={18}/>
+                    <Arrow/>
                    </View>
                </View>
               </TouchableOpacity>
